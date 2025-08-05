@@ -163,12 +163,11 @@ bool waitForSNTPSync(tm *timeInfo)
 
   // This string is printed to terminal to help with debugging. The API key is
   // censored to reduce the risk of users exposing their key.
-  String sanitizedUri = METEO_API_ENDPOINT + uri + "&appid={API key}";
-
-  uri += "&appid=" + APIKEY;
+  //String sanitizedUri = METEO_API_ENDPOINT + uri + "&appid={API key}";
+  //uri += "&appid=" + APIKEY;
 
   Serial.print(TXT_ATTEMPTING_HTTP_REQ);
-  Serial.println(": " + sanitizedUri);
+  Serial.println(": " + uri);
   int httpResponse = 0;
   while (!rxSuccess && attempts < 3)
   {
